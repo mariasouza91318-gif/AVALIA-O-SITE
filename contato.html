@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Portal Muriaé - MG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>Portal Muriaé - MG</h1>
+      <p>Informação, História e Cidadania da Princesa da Zona da Mata</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="nossa-historia.html">Nossa História</a></li>
+        <li><a href="codigo-de-etica.html">Código de Ética</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="content-box">
+      <h2>Entre em Contato</h2>
+      <p>Tem alguma dúvida, sugestão de pauta ou mensagem sobre Muriaé? Preencha o formulário abaixo:</p>
+
+      <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Obrigado pelo contato.'); this.reset();">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+
+      <div class="back-container">
+        <a href="index.html" class="btn btn-voltar">&larr; Voltar para a Página Principal</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Portal Muriaé - MG. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

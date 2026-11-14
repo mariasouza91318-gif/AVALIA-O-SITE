@@ -1,0 +1,306 @@
+/* Reset e Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul-escuro: #0d3b66;
+  --azul-medio: #1d6fa5;
+  --branco-fundo: #f4f8ff;
+  --branco-puro: #ffffff;
+  --texto-principal: #1e293b;
+  --borda-suave: #d0e1f9;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--branco-fundo);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header Padrão */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco-fundo);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+.header-content p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Navegação Padrão */
+nav {
+  background-color: var(--azul-medio);
+  box-shadow: 0 2px 6px rgba(13, 59, 102, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--branco-fundo);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: var(--azul-escuro);
+}
+
+/* Conteúdo Principal */
+main {
+  flex: 1;
+  padding: 2.5rem 0;
+}
+
+/* Banner da Página Inicial */
+.banner {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul-medio));
+  color: var(--branco-fundo);
+  padding: 3.5rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 6px 18px rgba(13, 59, 102, 0.18);
+}
+
+.banner h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background-color: var(--branco-fundo);
+  color: var(--azul-escuro);
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--branco-fundo);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--branco-fundo);
+}
+
+.content-box .btn {
+  background-color: var(--azul-medio);
+  color: var(--branco-fundo);
+  border-color: var(--azul-medio);
+}
+
+.content-box .btn:hover {
+  background-color: var(--azul-escuro);
+  border-color: var(--azul-escuro);
+}
+
+.btn-voltar {
+  background-color: var(--azul-escuro) !important;
+  border-color: var(--azul-escuro) !important;
+}
+
+.btn-voltar:hover {
+  background-color: var(--azul-medio) !important;
+  border-color: var(--azul-medio) !important;
+}
+
+/* Cards da Home */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--branco-puro);
+  border: 1px solid var(--borda-suave);
+  border-top: 4px solid var(--azul-medio);
+  border-radius: 8px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 10px rgba(13, 59, 102, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  margin-bottom: 1.2rem;
+}
+
+.link-detalhe {
+  color: var(--azul-medio);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link-detalhe:hover {
+  color: var(--azul-escuro);
+  text-decoration: underline;
+}
+
+/* Caixa de Conteúdo das Páginas Internas */
+.content-box {
+  background-color: var(--branco-puro);
+  border: 1px solid var(--borda-suave);
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(13, 59, 102, 0.08);
+}
+
+.content-box h2 {
+  color: var(--azul-escuro);
+  font-size: 1.9rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--azul-medio);
+}
+
+.content-box p {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+/* Lista do Código de Ética */
+.valores-lista {
+  margin: 1.5rem 0 2rem 1.5rem;
+}
+
+.valores-lista li {
+  margin-bottom: 1.2rem;
+  padding: 1rem 1.2rem;
+  background-color: var(--branco-fundo);
+  border-left: 4px solid var(--azul-medio);
+  border-radius: 0 6px 6px 0;
+}
+
+.valores-lista strong {
+  color: var(--azul-escuro);
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Formulário de Contato */
+.contact-form {
+  max-width: 600px;
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--azul-escuro);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid var(--borda-suave);
+  border-radius: 6px;
+  background-color: var(--branco-fundo);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto-principal);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--azul-medio);
+  background-color: var(--branco-puro);
+}
+
+.back-container {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--borda-suave);
+}
+
+/* Footer Padrão */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco-fundo);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: auto;
+  font-size: 0.95rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .banner h2 {
+    font-size: 1.8rem;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-box {
+    padding: 1.5rem;
+  }
+}
